@@ -27,11 +27,11 @@ else:
         pointslist.append(a + i*dx)
 
 #integration function here
-def approxIntegral():
+def approxIntegral(points, func):
     total = 0
     for i in range(len(pointslist)):
-        x = pointslist[i] #move to the next rectangle
-        total += f(x) * dx #adds one rectangle width dx length f(x)
+        x = points[i] #move to the next rectangle
+        total += func(x) * dx #adds one rectangle width dx length f(x)
     return total
 
 print("")

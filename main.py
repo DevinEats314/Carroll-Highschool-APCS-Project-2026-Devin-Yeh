@@ -35,4 +35,4 @@ def approxIntegral(points, func):
     return total
 
 print("")
-print("The integral of ", func, " from ", a, " to ", b, " is approximately ", round(approxIntegral(), 3))
+print("The integral of ", func, " from ", a, " to ", b, " is approximately ", round(approxIntegral(pointslist, f), 3))

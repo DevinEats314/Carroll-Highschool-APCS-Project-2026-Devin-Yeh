@@ -31,7 +31,10 @@ def approxIntegral(points, func):
     total = 0
     for i in range(len(pointslist)):
         x = points[i] #move to the next rectangle
-        total += func(x) * dx #adds one rectangle width dx length f(x)
+        if i == len(pointslist) - 1:
+            break
+        else:
+            total += func(x) * (points[i+1] - points[i]) #adds one rectangle width dx length f(x)
     return total
 
 print("")
